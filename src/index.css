@@ -1,17 +1,82 @@
 body {
   margin: 0;
-  padding: 0;
-  font-family: Arial, sans-serif;
-  display: flex;
-  height: 100vh;
-}
-
-#root {
-  flex-grow: 1;
-  display: flex;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.navbar {
+  background-color: #47441A;
+  margin-top: -20px; 
+  padding-left: 20px;
+  height: 50px;
+  border-radius: 5px; 
+}
+
+.bots-containers {
+  display: flex;
+  flex-direction: row;
+  margin-top: 0px;
+}
+
+.bots-collection {
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  border: 1px solid;
+  border-radius: 5px;
+  margin-right: 5px;
+  margin-left: 5px;
+  flex-wrap: wrap;
+}
+
+.each-bot {
+  display: flex;
+  flex-direction: column;
+  width: 190px;
+  border: 1px solid;
+  border-radius: 5px;
+  margin: 15px;
+  overflow-wrap: break-word;
+  height: fit-content;
+}
+
+.each-bot > span {
+  display: flex;
+  flex-direction: row;
+}
+
+.each-bot > span > p {
+  padding-right: 10px;
+  
+}
+
+.each-bot > img {
+  background-color: beige;
+}
+
+.each-bot > button {
+  background-color: red;
+}
+
+.each-bot > h5, p {
+  padding: 10px;
+  font-size: xx-small;
+  margin: 0px;
+}
+
+.heading {
+  display: flex;
+  justify-content: space-between;
+  margin-left: 60px;
+  margin-right: 25%;
+  margin-bottom: 0px;
+  margin-top: 0px;
 }

@@ -32,7 +32,7 @@ Bots Battlr is an interactive web app built with React that enables users to cre
 
 ## How To Run It
 npm start
-npm run server
+npx json-server --watch db.json --port 8001
 *****
 ## Live Link
 Or you can access the web application directly via this []

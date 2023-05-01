@@ -1,75 +1,136 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
-}
-
-.App {
-  text-align: center;
-}
-
-.bot-list {
-  display: flex;
-  justify-content: space-around;
-}
-
+/* BotCollection component */
 .bot-collection {
-  width: 50%;
-}
-
-.your-bot-army {
-  width: 50%;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
 }
 
 .bot-card {
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   width: 200px;
   height: 300px;
-  margin: 10px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 10px;
-  background-color: #f8f8f8;
-  text-align: left;
-}
-
-.bot-card.enlisted {
-  background-color: #e0f7fa;
-}
-
-.bot-card img {
-  width: 100%;
-  height: auto;
-}
-
-.bot-card h2 {
-  font-size: 18px;
-  margin: 0;
-}
-
-.bot-card p {
-  margin: 0;
-  font-size: 14px;
-}
-
-.discharge-button {
-  background-color: #f44336;
-  color: white;
-  border: none;
-  padding: 5px 10px;
-  text-align: center;
-  text-decoration: none;
-  display: inline-block;
-  font-size: 12px;
-  margin: 5px 2px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
   cursor: pointer;
-  border-radius: 5px;
+  transition: all 0.3s ease-in-out;
+}
+
+.bot-card:hover {
+  transform: scale(1.1);
+}
+
+.bot-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.bot-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.bot-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.bot-description {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.bot-enlisted {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1;
+}
+
+.bot-enlisted:before {
+  content: "Enlisted";
+  margin-right: 5px;
+}
+
+/* YourBotArmy component */
+.bot-army {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.bot-army-card {
+  position: relative;
+  width: 200px;
+  height: 300px;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  cursor: pointer;
+  transition: all 0.3s ease-in-out;
+}
+
+.bot-army-card:hover {
+  transform: scale(1.1);
+}
+
+.bot-army-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.bot-army-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px;
+  text-align: center;
+}
+
+.bot-army-name {
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.bot-army-description {
+  font-size: 0.9rem;
+  color: #666;
+}
+
+.bot-army-remove {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 700;
+  background-color: red;
+  border: none;
+  border-radius: 50%;
+  width: 30px;
+  height: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3
 }

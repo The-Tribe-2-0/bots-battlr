@@ -35,7 +35,7 @@ npm start
 npx json-server --watch db.json --port 8001
 *****
 ## Live Link
-Or you can access the web application directly via this []
+Or you can access the web application directly via this [https://bots-battlr.vercel.app/]
 *****
 ## Dependencies
 - Package react
